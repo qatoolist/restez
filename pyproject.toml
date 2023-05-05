@@ -1,17 +1,20 @@
+[tool.hatch.metadata.hooks.requirements_txt]
+files = ["requirements.txt"]
+
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-requirements-txt"]
 build-backend = "hatchling.build"
 
 [project]
 name = "restez"
-dynamic = ["version"]
-description = ''
+dynamic = ["version", "dependencies"]
+description = 'A comprehensive framework for testing RESTful APIs.'
 readme = "README.md"
 requires-python = ">=3.7"
 license = "MIT"
 keywords = []
 authors = [
-  { name = "Anand Chavan", email = "anandc8788@gmail.com" },
+  { name = "QA Toolist", email = "qatoolist@gmail.com" },
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -27,9 +30,12 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Documentation = "https://github.com/unknown/restez#readme"
-Issues = "https://github.com/unknown/restez/issues"
-Source = "https://github.com/unknown/restez"
+Homepage = "https://github.com/qatoolist/restez"
+Documentation = "https://github.com/qatoolist/restez#readme"
+Issues = "https://github.com/qatoolist/restez/issues"
+Source = "https://github.com/qatoolist/restez"
+Repository = "https://github.com/qatoolist/restez"
+Changelog = "https://github.com/qatoolist/restez/releases"
 
 [tool.hatch.version]
 path = "src/restez/__about__.py"
@@ -176,6 +182,7 @@ restez = ["src/restez", "*/restez/src/restez"]
 tests = ["tests", "*/restez/tests"]
 
 [tool.coverage.report]
+precision = 2
 exclude_lines = [
   "no cov",
   "if __name__ == .__main__.:",
