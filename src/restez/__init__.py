@@ -1,1 +1,1 @@
-"""The routestpy package."""
+"""The restez package."""
