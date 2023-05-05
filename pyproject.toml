@@ -80,6 +80,29 @@ all = [
 [tool.isort]
 profile = "black"
 
+[tool.tox]
+legacy_tox_ini = """
+    [tox]
+    min_version = 4.0
+    env_list =
+        py310
+        py39
+        py38
+        py37
+        type
+
+    [testenv]
+    deps = 
+      pytest
+      -r requirements.txt
+      -r requirements-dev.txt
+    commands = pytest tests
+
+    [testenv:type]
+    deps = mypy
+    commands = mypy src
+"""
+
 [tool.black]
 target-version = ["py37"]
 line-length = 120
