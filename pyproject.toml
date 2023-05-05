@@ -98,7 +98,7 @@ legacy_tox_ini = """
         type
 
     [testenv]
-    deps = 
+    deps =
       pytest
       -r requirements.txt
       -r requirements-dev.txt
