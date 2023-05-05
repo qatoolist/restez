@@ -18,10 +18,11 @@ repos:
     rev: 6.0.0
     hooks:
     -   id: flake8
--   repo: https://github.com/PyCQA/pylint
-    rev: pylint-2.17.3
+-   repo: https://github.com/pre-commit/mirrors-pylint
+    rev: v3.0.0a5
     hooks:
     -   id: pylint
+        exclude: (?x)^(docs/conf.py)$
 -   repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.2.0
     hooks:
@@ -34,7 +35,4 @@ repos:
     rev: 6.3.0
     hooks:
     -   id: pydocstyle
--   repo: https://github.com/nedbat/coveragepy
-    rev: 7.2.5
-    hooks:
-    -   id: coverage
+        exclude: (?x)^(docs/conf.py)$
