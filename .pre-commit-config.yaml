@@ -22,11 +22,23 @@ repos:
     rev: v3.0.0a5
     hooks:
     -   id: pylint
+        files: .
         exclude: (?x)^(docs/conf.py)$
+        args:
+            - --disable=import-error,no-member
+            - --max-locals=20
 -   repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.2.0
     hooks:
     -   id: mypy
+        args: [--install-types, --non-interactive]
+        additional_dependencies:
+          - types-toml
+          - types-PyYAML
+          - types-jinja2
+          - types-click
+          - typer
+          - rich
 -   repo: https://github.com/PyCQA/bandit
     rev: 1.7.5
     hooks:
