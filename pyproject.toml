@@ -29,6 +29,9 @@ classifiers = [
 ]
 dependencies = []
 
+[project.scripts]
+routestpy = "restez.cli.cli:app"
+
 [project.urls]
 Homepage = "https://github.com/qatoolist/restez"
 Documentation = "https://github.com/qatoolist/restez#readme"
